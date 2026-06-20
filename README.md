@@ -116,10 +116,6 @@ Insert a screenshot showing:
 
 Example:
 
-```text
-/screenshots/SC1-ADDS-Installed.png
-```
-
 ---
 
 # Step 2 - Promote the Server to a Domain Controller
@@ -224,9 +220,7 @@ inside Active Directory Users and Computers.
 
 Example:
 
-```text
-/screenshots/SC3-Organizational-Units.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/1.%20Creating%20OU's%20-%20SC1.png)
 
 ---
 
@@ -270,6 +264,14 @@ Example:
 ```text
 /screenshots/SC4-Security-Groups.png
 ```
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/2.%20Creating%20Security%20Groups%20-%20IT%20Admins%20-%20SC2.png)
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/2.%20Creating%20Security%20Groups%20-%20Sales%20Users%20-%20SC2.png)
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/2.%20Creating%20Security%20Groups%20-%20HR%20Users%20-%20SC2.png)
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/2.%20Creating%20Security%20Groups%20-%20Finance%20Users%20-%20SC2.png)
 
 ---
 
