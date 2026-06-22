@@ -1,4 +1,4 @@
-# MTWAzureLab Active Directory Home Lab
+# Active Directory Lab (MTWAzureLab.local) 
 
 
 > Windows Server 2025 • Microsoft Azure • Active Directory Domain Services • PowerShell
