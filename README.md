@@ -318,7 +318,7 @@ Set-ADUser -Identity "naomi.vale" -ChangePasswordAtLogon $true
 
 ##### Step 1
 
-![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Resetting%20Password%20V1%20-%20SC5.png)
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/b9839bb96caf010b419d930d4645f07cf9a94bdd/AD%20Lab%20Documentation/Screenshots/5.%20Resetting%20Password%20V1%20-%20SC5%20(NEW).png)
 
 ##### Step 2
 
@@ -332,7 +332,14 @@ Unlock-ADAccount -Identity "naomi.vale"
 ```
 
 #### Using GUI (Add Red Circle)
-![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Unlocking%20Accounts%20V1%20-%20SC5.png)
+
+##### Step 1
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/b9839bb96caf010b419d930d4645f07cf9a94bdd/AD%20Lab%20Documentation/Screenshots/5.%20Account%20Unlocks%20V1%20-%20SC5%20(NEW).png)
+
+#### Step 2
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/b9839bb96caf010b419d930d4645f07cf9a94bdd/AD%20Lab%20Documentation/Screenshots/5.%20Unlocking%20Accounts%20V1%20-%20SC5%20(NEW).png)
 
 ## Disable an Account
 
@@ -344,7 +351,7 @@ Disable-ADAccount -Identity "naomi.vale"
 
 #### Using GUI (Add Red Circle)
 
-![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Disabling%20Accounts%20V1%20-%20SC5.png)
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/6b153a12ac5003ce66ea9ea8e3db77ba4e1210d7/AD%20Lab%20Documentation/Screenshots/5.%20Disabling%20Accounts%20V1%20-%20SC5%20(NEW).png)
 
 ## Audit Group Membership
 
