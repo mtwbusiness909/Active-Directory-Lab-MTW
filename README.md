@@ -314,7 +314,7 @@ Set-ADAccountPassword -Identity "naomi.vale" -Reset `
 Set-ADUser -Identity "naomi.vale" -ChangePasswordAtLogon $true
 ```
 
-#### Using GUI (Add Red Circle)
+#### Using GUI
 
 ##### Step 1
 
@@ -331,7 +331,7 @@ Set-ADUser -Identity "naomi.vale" -ChangePasswordAtLogon $true
 Unlock-ADAccount -Identity "naomi.vale"
 ```
 
-#### Using GUI (Add Red Circle)
+#### Using GUI
 
 ##### Step 1
 
@@ -349,7 +349,7 @@ Unlock-ADAccount -Identity "naomi.vale"
 Disable-ADAccount -Identity "naomi.vale"
 ```
 
-#### Using GUI (Add Red Circle)
+#### Using GUI
 
 ![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/6b153a12ac5003ce66ea9ea8e3db77ba4e1210d7/AD%20Lab%20Documentation/Screenshots/5.%20Disabling%20Accounts%20V1%20-%20SC5%20(NEW).png)
 
