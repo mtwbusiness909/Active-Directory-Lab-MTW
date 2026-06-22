@@ -1,5 +1,6 @@
 # MTWAzureLab Active Directory Home Lab
 
+
 > Windows Server 2025 • Microsoft Azure • Active Directory Domain Services • PowerShell
 
 ## Overview
@@ -8,9 +9,7 @@ This project demonstrates the deployment and configuration of a fully functional
 
 The lab simulates a small business environment by creating departmental Organizational Units (OUs), Security Groups, User Accounts, and Group Policy Objects (GPOs). The goal is to showcase foundational Identity and Access Management (IAM) skills commonly used by Help Desk Technicians, System Administrators, Cloud Engineers, and Security Analysts.
 
----
-
-# Business Problem
+## Business Problem
 
 Organizations need a centralized way to manage users, computers, permissions, and security policies.
 
@@ -24,9 +23,7 @@ Active Directory solves this problem by providing:
 
 Instead of configuring each computer individually, administrators can manage users and security policies from a single location.
 
----
-
-# Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |------------|----------|
@@ -37,11 +34,11 @@ Instead of configuring each computer individually, administrators can manage use
 | PowerShell | Automation |
 | Active Directory Users and Computers (ADUC) | Directory Administration |
 
----
 
-# Lab Architecture
 
-## Domain Information
+## Lab Architecture
+
+#### Domain Information
 
 | Setting | Value |
 |----------|----------|
@@ -50,11 +47,9 @@ Instead of configuring each computer individually, administrators can manage use
 | Domain Controller | Windows Server 2025 |
 | Platform | Microsoft Azure |
 
----
+## Organizational Structure
 
-# Organizational Structure
-
-## Organizational Units (OUs)
+#### Organizational Units (OUs)
 
 | OU Name |
 |----------|
@@ -64,7 +59,7 @@ Instead of configuring each computer individually, administrators can manage use
 | Finance |
 | Computers |
 
-## Security Groups
+#### Security Groups
 
 | Department | Group Name |
 |------------|------------|
@@ -73,7 +68,7 @@ Instead of configuring each computer individually, administrators can manage use
 | HR | HR Users |
 | Finance | Finance Users |
 
-## User Accounts
+#### User Accounts
 
 | Department | User |
 |------------|----------|
@@ -104,19 +99,6 @@ Install-WindowsFeature -Name GPMC
 
 ---
 
-## Screenshot
-
-### SC1 - AD DS Installation Complete
-
-Insert a screenshot showing:
-
-- Active Directory Domain Services installed
-- Installation results successful
-- Server Manager confirmation screen
-
-Example:
-
----
 
 # Step 2 - Promote the Server to a Domain Controller
 
@@ -158,23 +140,6 @@ MTWAzureLab.local
 
 ---
 
-## Screenshot
-
-### SC2 - Domain Controller Promotion
-
-Insert a screenshot showing:
-
-- New Forest selected
-- MTWAzureLab.local configured
-
-Example:
-
-```text
-/screenshots/SC2-Domain-Promotion.png
-```
-
----
-
 # Step 3 - Create Organizational Units
 
 ## Why This Matters
@@ -188,8 +153,6 @@ This allows administrators to:
 - Apply department-specific Group Policies
 - Simplify administration
 
-### PowerShell
-
 ```powershell
 New-ADOrganizationalUnit -Name "IT" -Path "DC=MTWAzureLab,DC=local"
 
@@ -202,23 +165,7 @@ New-ADOrganizationalUnit -Name "Finance" -Path "DC=MTWAzureLab,DC=local"
 New-ADOrganizationalUnit -Name "Computers" -Path "DC=MTWAzureLab,DC=local"
 ```
 
----
-
-## Screenshot
-
-### SC3 - Organizational Units Created
-
-Insert a screenshot showing:
-
-- IT OU
-- Sales OU
-- HR OU
-- Finance OU
-- Computers OU
-
-inside Active Directory Users and Computers.
-
-Example:
+### Organizational Units Created
 
 ![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/1.%20Creating%20OU's%20-%20SC1.png)
 
@@ -234,8 +181,6 @@ Instead of assigning permissions to individual users, permissions are assigned t
 
 This approach scales much better in enterprise environments.
 
-### PowerShell
-
 ```powershell
 New-ADGroup -Name "IT Admins" -GroupScope Global -GroupCategory Security -Path "OU=IT,DC=MTWAzureLab,DC=local"
 
@@ -246,24 +191,7 @@ New-ADGroup -Name "HR Users" -GroupScope Global -GroupCategory Security -Path "O
 New-ADGroup -Name "Finance Users" -GroupScope Global -GroupCategory Security -Path "OU=Finance,DC=MTWAzureLab,DC=local"
 ```
 
----
-
-## Screenshot
-
-### SC4 - Security Groups Created
-
-Insert a screenshot showing:
-
-- IT Admins
-- Sales Users
-- HR Users
-- Finance Users
-
-Example:
-
-```text
-/screenshots/SC4-Security-Groups.png
-```
+### Security Groups Created
 
 ![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/74bd896b035446c5b52a286f3d1881fa2eea1c87/AD%20Lab%20Documentation/Screenshots/2.%20Creating%20Security%20Groups%20-%20IT%20Admins%20-%20SC2.png)
 
@@ -310,26 +238,15 @@ Add-ADGroupMember -Identity "HR Users" -Members "elena.cross"
 Add-ADGroupMember -Identity "Finance Users" -Members "mason.whitaker"
 ```
 
----
+### User Accounts Created
 
-## Screenshot
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/3.%20Creating%20the%20Users%20Accounts%20-%20Naomi%20Vale%20(IT)%20-%20SC3.png)
 
-### SC5 - User Accounts Created
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/3.%20Creating%20the%20Users%20Accounts%20-%20Julian%20Mercer%20(Sales)%20-%20SC3.png)
 
-Insert a screenshot showing:
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/3.%20Creating%20the%20Users%20Accounts%20-%20Elena%20Cross%20(HR)%20-%20SC3.png)
 
-- Naomi Vale
-- Julian Mercer
-- Elena Cross
-- Mason Whitaker
-
-within their respective OUs.
-
-Example:
-
-```text
-/screenshots/SC5-Users-Created.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/3.%20Creating%20the%20Users%20Accounts%20-%20Mason%20Whitaker%20(Finance)%20-%20SC3.png)
 
 ---
 
@@ -358,65 +275,27 @@ MTWAzureLab Security Policy
 
 ---
 
-## Screenshot
+### Minimum Password Length
 
-### SC6 - Minimum Password Length
-
-Insert screenshot of:
-
-```text
-Computer Configuration
- └ Security Settings
-     └ Password Policy
-         └ Minimum Password Length
-```
-
-```text
-/screenshots/SC6-Minimum-Password-Length.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V4%20-%20Minimum%20Password%20Length%20-%20SC4.png)
 
 ---
 
-### SC7 - Password Complexity Enabled
+### Password Complexity Enabled
 
-Insert screenshot of:
-
-```text
-Password must meet complexity requirements
-```
-
-```text
-/screenshots/SC7-Password-Complexity.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V4%20-%20Password%20meets%20complexity%20requirements%20-%20SC4.png)
 
 ---
 
-### SC8 - Machine Inactivity Limit
+### Machine Inactivity Limit
 
-Insert screenshot of:
-
-```text
-Interactive Logon: Machine Inactivity Limit
-```
-
-```text
-/screenshots/SC8-Inactivity-Limit.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V4%20-%20Interactive%20Logon%20Machine%20Inactivity%20Limit%20-%20SC4.png)
 
 ---
 
-### SC9 - USB Storage Restriction
+### USB Storage Restriction
 
-Insert screenshot of:
-
-```text
-All Removable Storage Classes:
-Deny All Access
-```
-
-```text
-/screenshots/SC9-USB-Restriction.png
-```
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V4%20-%20All%20removable%20storage%20classes%20deny%20all%20access%20-%20SC4.png)
 
 ---
 
@@ -426,6 +305,8 @@ These are common Active Directory tasks performed daily by Help Desk and System 
 
 ## Reset a Password
 
+#### PowerShell
+
 ```powershell
 Set-ADAccountPassword -Identity "naomi.vale" -Reset `
 -NewPassword (ConvertTo-SecureString "NewPass@2026!" -AsPlainText -Force)
@@ -433,22 +314,44 @@ Set-ADAccountPassword -Identity "naomi.vale" -Reset `
 Set-ADUser -Identity "naomi.vale" -ChangePasswordAtLogon $true
 ```
 
+#### Using GUI (Add Red Circle)
+
+##### Step 1
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Resetting%20Password%20V1%20-%20SC5.png)
+
+##### Step 2
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Resetting%20Password%20V2%20-%20SC5.png)
+
 ## Unlock an Account
 
+#### PowerShell
 ```powershell
-Unlock-ADAccount -Identity "julian.mercer"
+Unlock-ADAccount -Identity "naomi.vale"
 ```
+
+#### Using GUI (Add Red Circle)
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Unlocking%20Accounts%20V1%20-%20SC5.png)
 
 ## Disable an Account
 
+#### PowerShell
+
 ```powershell
-Disable-ADAccount -Identity "elena.cross"
+Disable-ADAccount -Identity "naomi.vale"
 ```
+
+#### Using GUI (Add Red Circle)
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Homelab-MTW/blob/690f6ee8584a6d1728f293b536825bee89536c9e/AD%20Lab%20Documentation/Screenshots/5.%20Disabling%20Accounts%20V1%20-%20SC5.png)
 
 ## Audit Group Membership
 
+#### PowerShell
+
 ```powershell
-Get-ADPrincipalGroupMembership -Identity "mason.whitaker"
+Get-ADPrincipalGroupMembership -Identity "naomi.vale"
 ```
 
 ---
@@ -489,8 +392,7 @@ Get-ADGroupMember -Identity "IT Admins"
 Get-GPInheritance -Target 'OU=IT,DC=MTWAzureLab,DC=local'
 ```
 
----
-
+<!--
 ## Screenshot
 
 ### SC10 - Verification Results
@@ -507,6 +409,8 @@ Example:
 ```text
 /screenshots/SC10-Verification.png
 ```
+
+-->
 
 ---
 
