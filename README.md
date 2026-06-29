@@ -1,4 +1,4 @@
-# Active Directory Lab (MTWAzureLab.local) 
+### Active Directory Lab (MTWAzureLab.local)
 
 
 > Windows Server 2025 • Microsoft Azure • Active Directory Domain Services • PowerShell
@@ -36,7 +36,7 @@ Instead of configuring each computer individually, administrators can manage use
 
 
 
-## Lab Architecture
+### Lab Architecture
 
 #### Domain Information
 
@@ -81,7 +81,7 @@ Instead of configuring each computer individually, administrators can manage use
 
 # Step 1 - Install Active Directory Domain Services
 
-## Why This Matters
+### Why This Matters
 
 Active Directory cannot function until the AD DS role is installed. This role provides the services required to manage users, groups, computers, and authentication within a Windows domain.
 
@@ -102,11 +102,9 @@ Install-WindowsFeature -Name GPMC
 
 # Step 2 - Promote the Server to a Domain Controller
 
-## Why This Matters
+### Why This Matters
 
-Installing AD DS only installs the software.
-
-Promoting the server creates:
+Installing AD DS only installs the software. Promoting the server creates:
 
 - Active Directory Forest
 - Active Directory Domain
@@ -142,11 +140,9 @@ MTWAzureLab.local
 
 # Step 3 - Create Organizational Units
 
-## Why This Matters
+### Why This Matters
 
-Organizational Units (OUs) provide logical separation between departments.
-
-This allows administrators to:
+Organizational Units (OUs) provide logical separation between departments. This allows administrators to:
 
 - Organize users
 - Organize computers
@@ -173,13 +169,9 @@ New-ADOrganizationalUnit -Name "Computers" -Path "DC=MTWAzureLab,DC=local"
 
 # Step 4 - Create Security Groups
 
-## Why This Matters
+### Why This Matters
 
-Security Groups enable Role-Based Access Control (RBAC).
-
-Instead of assigning permissions to individual users, permissions are assigned to groups.
-
-This approach scales much better in enterprise environments.
+Security Groups enable Role-Based Access Control (RBAC). Instead of assigning permissions to individual users, permissions are assigned to groups. This approach scales much better in enterprise environments.
 
 ```powershell
 New-ADGroup -Name "IT Admins" -GroupScope Global -GroupCategory Security -Path "OU=IT,DC=MTWAzureLab,DC=local"
@@ -205,7 +197,7 @@ New-ADGroup -Name "Finance Users" -GroupScope Global -GroupCategory Security -Pa
 
 # Step 5 - Create User Accounts
 
-## Why This Matters
+### Why This Matters
 
 User accounts represent employees within the organization.
 
@@ -252,7 +244,7 @@ Add-ADGroupMember -Identity "Finance Users" -Members "mason.whitaker"
 
 # Step 6 - Configure Group Policy
 
-## Why This Matters
+### Why This Matters
 
 Group Policy allows administrators to enforce security settings across all domain devices from a central location.
 
