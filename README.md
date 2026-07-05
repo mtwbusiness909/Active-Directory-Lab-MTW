@@ -150,15 +150,15 @@ Organizational Units (OUs) provide logical separation between departments. This 
 - Simplify administration
 
 ```powershell
-New-ADOrganizationalUnit -Name "IT" -Path "DC=MTWAzureLab,DC=local"
+New-ADOrganizationalUnit -Name "IT" -Path "DC=MTWAzureAD,DC=local"
 
-New-ADOrganizationalUnit -Name "Sales" -Path "DC=MTWAzureLab,DC=local"
+New-ADOrganizationalUnit -Name "Sales" -Path "DC=MTWAzureAD,DC=local"
 
-New-ADOrganizationalUnit -Name "HR" -Path "DC=MTWAzureLab,DC=local"
+New-ADOrganizationalUnit -Name "HR" -Path "DC=MTWAzureAD,DC=local"
 
-New-ADOrganizationalUnit -Name "Finance" -Path "DC=MTWAzureLab,DC=local"
+New-ADOrganizationalUnit -Name "Finance" -Path "DC=MTWAzureAD,DC=local"
 
-New-ADOrganizationalUnit -Name "Computers" -Path "DC=MTWAzureLab,DC=local"
+New-ADOrganizationalUnit -Name "Computers" -Path "DC=MTWAzureAD,DC=local"
 ```
 
 ### Organizational Units Created
