@@ -174,13 +174,13 @@ New-ADOrganizationalUnit -Name "Computers" -Path "DC=MTWAzureAD,DC=local"
 Security Groups enable Role-Based Access Control (RBAC). Instead of assigning permissions to individual users, permissions are assigned to groups. This approach scales much better in enterprise environments.
 
 ```powershell
-New-ADGroup -Name "IT Admins" -GroupScope Global -GroupCategory Security -Path "OU=IT,DC=MTWAzureLab,DC=local"
+New-ADGroup -Name "IT Admins" -GroupScope Global -GroupCategory Security -Path "OU=IT,DC=MTWAzureAD,DC=local"
 
-New-ADGroup -Name "Sales Users" -GroupScope Global -GroupCategory Security -Path "OU=Sales,DC=MTWAzureLab,DC=local"
+New-ADGroup -Name "Sales Users" -GroupScope Global -GroupCategory Security -Path "OU=Sales,DC=MTWAzureAD,DC=local"
 
-New-ADGroup -Name "HR Users" -GroupScope Global -GroupCategory Security -Path "OU=HR,DC=MTWAzureLab,DC=local"
+New-ADGroup -Name "HR Users" -GroupScope Global -GroupCategory Security -Path "OU=HR,DC=MTWAzureAD,DC=local"
 
-New-ADGroup -Name "Finance Users" -GroupScope Global -GroupCategory Security -Path "OU=Finance,DC=MTWAzureLab,DC=local"
+New-ADGroup -Name "Finance Users" -GroupScope Global -GroupCategory Security -Path "OU=Finance,DC=MTWAzureAD,DC=local"
 ```
 
 ### Security Groups Created
