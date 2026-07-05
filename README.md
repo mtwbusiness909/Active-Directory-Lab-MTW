@@ -203,13 +203,41 @@ User accounts represent employees within the organization.
 
 Authentication, permissions, and resource access are tied directly to user accounts and their group memberships.
 
-### Password Variable
+### Password Variable 
 
 ```powershell
+# Strong password that meets standard AD complexity requirements
 $password = ConvertTo-SecureString "Welcome@2026!" -AsPlainText -Force
 ```
 
 ### Users Created
+
+```powershell
+
+# IT Department - Naomi Vale
+New-ADUser -Name "Naomi Vale" -GivenName "Naomi" -Surname "Vale" `
+  -SamAccountName "Naomi.Vale" -UserPrincipalName "naomi.vale@MTWAzureAD.local" `
+  -Path "OU=1. IT,DC=MTWAzureAD,DC=local" `
+  -AccountPassword $password -Enabled $true
+
+# Sales Department - Julian Mercer
+New-ADUser -Name "Julian Mercer" -GivenName "Julian" -Surname "Mercer" `
+  -SamAccountName "Julian.Mercer" -UserPrincipalName "julian.mercer@MTWAzureAD.local" `
+  -Path "OU=2. Sales,DC=MTWAzureAD,DC=local" `
+  -AccountPassword $password -Enabled $true
+
+# HR Department - Elena Cross
+New-ADUser -Name "Elena Cross" -GivenName "Elena" -Surname "Cross" `
+  -SamAccountName "Elena.Cross" -UserPrincipalName "elena.cross@MTWAzureAD.local" `
+  -Path "OU=3. HR,DC=MTWAzureAD,DC=local" `
+  -AccountPassword $password -Enabled $true
+
+# Finance Department - Mason Whitaker
+New-ADUser -Name "Mason Whitaker" -GivenName "Mason" -Surname "Whitaker" `
+  -SamAccountName "Mason.Whitaker" -UserPrincipalName "mason.whitaker@MTWAzureAD.local" `
+  -Path "OU=4. Finance,DC=MTWAzureAD,DC=local" `
+  -AccountPassword $password -Enabled $true
+```
 
 | User | Department |
 |--------|------------|
