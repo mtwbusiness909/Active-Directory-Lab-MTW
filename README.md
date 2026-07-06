@@ -137,19 +137,19 @@ This transforms the server into the identity authority for the environment.
 ![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.3.%20A%20DSRM%20Password%20-%20SC1.png)
 
 
-5. If you run into this issue, follow step 6.
+4. If you run into this issue, follow step 5.
 
 ![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.4.%20Error%20-%20Prerequisite%20Check%20for%20forest%20setup.png)
 
-6. Go to CMD, and type in the following command to set password for Local Administrator Account on the Windows Server.
+5. Go to CMD, and type in the following command to set password for Local Administrator Account on the Windows Server.
 
 ![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.5.%20CMD%20Local%20Admin%20setting%20password.png)
    
-5. Once that issue is resolved, complete the wizard 
+6. Once that issue is resolved, complete the wizard 
 
 ![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.6.%20Prerequisite%20Check%20Finished.png)
 
-6. Reboot the server
+7. Reboot the server
 
 ---
 
