@@ -281,7 +281,7 @@ Without Group Policy, each workstation would require manual configuration.
 ## GPO Name
 
 ```text
-MTWAzureLab Security Policy
+IT Security Policy
 ```
 
 ## Policies Configured
