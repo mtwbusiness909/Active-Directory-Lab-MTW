@@ -122,19 +122,34 @@ This transforms the server into the identity authority for the environment.
 
 ### Promotion Steps
 
-1. Open Server Manager
-2. Click the notification flag
-3. Select **Promote this server to a domain controller**
-4. Select **Add a new forest**
-5. Enter:
+   
+1. Open Server Manager, Click the notification flag, & select **Promote this server to a domain controller**
 
-```text
-MTWAzureLab.local
-```
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.1.%20A%20Server%20Promotion%20-%20SC1.png)
 
-6. Configure DSRM password
-7. Complete the wizard
-8. Reboot the server
+2. Select **Add a new forest** & Enter Root Domain Name
+
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.2.%20A%20New%20Forest%20Name%20-%20SC1.png)
+
+
+3. Configure DSRM password
+
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.3.%20A%20DSRM%20Password%20-%20SC1.png)
+
+
+5. If you run into this issue, follow step 6.
+
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.4.%20Error%20-%20Prerequisite%20Check%20for%20forest%20setup.png)
+
+6. Go to CMD, and type in the following command to set password for Local Administrator Account on the Windows Server.
+
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.5.%20CMD%20Local%20Admin%20setting%20password.png)
+   
+5. Once that issue is resolved, complete the wizard 
+
+![image alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/0.6.%20Prerequisite%20Check%20Finished.png)
+
+6. Reboot the server
 
 ---
 
@@ -278,17 +293,17 @@ Group Policy allows administrators to enforce security settings across all domai
 
 Without Group Policy, each workstation would require manual configuration.
 
-## GPO Name
+---
 
-```text
-IT Security Policy
-```
+#### Step 1 - Right click "1. IT" OU and click "Create a GPO in this domain, and Link it here..."
 
-Right click 1. IT OU and click "Create a GPO in this domain, and Link it here..."
-![Image Alt](21)
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V1%20-%20SC4.png)
 
-Type in IT Security Policy for the IT OU 
-![Image Alt](19)
+
+#### Step 2 - Create a GPO Name 
+
+![Image Alt](https://github.com/mtwbusiness909/Active-Directory-Lab-MTW/blob/a52e1e7d17fed4443b503c8fc86b219da2865449/AD%20Lab%20Documentation/Screenshots/4.%20Group%20Policy%20Management%20V1.1%20-%20SC4.png)
+
 
 ## Policies Configured
 
