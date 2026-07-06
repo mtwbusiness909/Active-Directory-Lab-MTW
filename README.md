@@ -284,6 +284,12 @@ Without Group Policy, each workstation would require manual configuration.
 IT Security Policy
 ```
 
+Right click 1. IT OU and click "Create a GPO in this domain, and Link it here..."
+![Image Alt](21)
+
+Type in IT Security Policy for the IT OU 
+![Image Alt](19)
+
 ## Policies Configured
 
 | Policy | Value | Business Benefit |
