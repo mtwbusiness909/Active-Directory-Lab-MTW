@@ -1,0 +1,11 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Active Directory Lab (MTWAzureAD.local)
+  structure:
+    - type: space
+      key: space-active-directory-lab
+      title: Active Directory Lab (MTWAzureAD.local)
+      path: active-directory-lab
+      default: true
+      content:
+        directory: .
